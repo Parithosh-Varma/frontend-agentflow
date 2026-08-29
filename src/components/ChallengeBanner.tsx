@@ -57,7 +57,6 @@ export function ChallengeBanner({ variant = 'banner' }: Props) {
         <a href={CHALLENGE_IMG} target="_blank" rel="noreferrer" className="challenge-hero-img-link" title="View full image">
           <img src={CHALLENGE_IMG} alt="Challenge — AgentFlow WebMCP hackathon" className="challenge-hero-img" loading="eager" />
         </a>
-        <button className="challenge-hero-close" onClick={handleDismiss} aria-label="Dismiss banner"><CloseIcon size={14} /></button>
       </div>
     </div>
   );
