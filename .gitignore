@@ -25,3 +25,6 @@ dist-ssr
 
 .opencode/
 .wrangler/
+
+# Local Netlify folder
+.netlify

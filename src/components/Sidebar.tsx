@@ -25,24 +25,24 @@ const NODE_CATALOG: Array<{
   color: string;
 }> = [
   // Connect
-  { type: 'api_call',  nodeType: 'apiCallNode',  label: 'API Call',  category: 'Connect',   desc: 'Fetch any REST API',      icon: <GlobeIcon size={13} />,     color: '#8f9fdd' },
-  { type: 'webhook',   nodeType: 'webhookNode',  label: 'Webhook',   category: 'Connect',   desc: 'Incoming HTTP trigger',    icon: <WebhookIcon size={13} />,   color: '#f0a07a' },
-  { type: 'file',      nodeType: 'fileNode',     label: 'File',      category: 'Connect',   desc: 'Read / write files',      icon: <FileIcon size={13} />,      color: '#93c5fd' },
+  { type: 'api_call',  nodeType: 'apiCallNode',  label: 'API Call',  category: 'Connect',   desc: 'Fetch any REST API',      icon: <GlobeIcon size={13} />,     color: '#35618c' },
+  { type: 'webhook',   nodeType: 'webhookNode',  label: 'Webhook',   category: 'Connect',   desc: 'Incoming HTTP trigger',    icon: <WebhookIcon size={13} />,   color: '#b85c2e' },
+  { type: 'file',      nodeType: 'fileNode',     label: 'File',      category: 'Connect',   desc: 'Read / write files',      icon: <FileIcon size={13} />,      color: '#4a6aa0' },
   // Logic
-  { type: 'condition', nodeType: 'conditionNode',label: 'Condition', category: 'Logic',     desc: 'If / else branch',        icon: <BranchIcon size={13} />,    color: '#d98aa6' },
-  { type: 'filter',    nodeType: 'filterNode',   label: 'Filter',    category: 'Logic',     desc: 'Keep matching rows',      icon: <FilterIcon size={13} />,    color: '#e8a33d' },
-  { type: 'split',     nodeType: 'splitNode',    label: 'Split',     category: 'Logic',     desc: 'Fan-out parallel',        icon: <SplitIcon size={13} />,     color: '#56cdbd' },
-  { type: 'merge',     nodeType: 'mergeNode',    label: 'Merge',     category: 'Logic',     desc: 'Join streams',            icon: <MergeIcon size={13} />,     color: '#7ec8e3' },
-  { type: 'loop',      nodeType: 'loopNode',     label: 'Loop',      category: 'Logic',     desc: 'Repeat over items',       icon: <LoopIcon size={13} />,      color: '#c9a0dc' },
+  { type: 'condition', nodeType: 'conditionNode',label: 'Condition', category: 'Logic',     desc: 'If / else branch',        icon: <BranchIcon size={13} />,    color: '#a83f66' },
+  { type: 'filter',    nodeType: 'filterNode',   label: 'Filter',    category: 'Logic',     desc: 'Keep matching rows',      icon: <FilterIcon size={13} />,    color: '#bd5a30' },
+  { type: 'split',     nodeType: 'splitNode',    label: 'Split',     category: 'Logic',     desc: 'Fan-out parallel',        icon: <SplitIcon size={13} />,     color: '#2a8c76' },
+  { type: 'merge',     nodeType: 'mergeNode',    label: 'Merge',     category: 'Logic',     desc: 'Join streams',            icon: <MergeIcon size={13} />,     color: '#3f7290' },
+  { type: 'loop',      nodeType: 'loopNode',     label: 'Loop',      category: 'Logic',     desc: 'Repeat over items',       icon: <LoopIcon size={13} />,      color: '#7a4fa0' },
   // Transform
-  { type: 'transform', nodeType: 'transformNode',label: 'Transform', category: 'Transform', desc: 'Map & reshape data',      icon: <TransformIcon size={13} />, color: '#e0b45c' },
-  { type: 'code',      nodeType: 'codeNode',     label: 'Code',      category: 'Transform', desc: 'Run JS snippet',          icon: <CodeIcon size={13} />,      color: '#a8d8a8' },
-  { type: 'validator', nodeType: 'validatorNode',label: 'Validator', category: 'Transform', desc: 'Schema check',            icon: <ValidatorIcon size={13} />, color: '#7dd3fc' },
-  { type: 'delay',     nodeType: 'delayNode',    label: 'Delay',     category: 'Transform', desc: 'Wait / throttle',         icon: <ClockIcon size={13} />,     color: '#ab97d4' },
-{ type: 'ai', nodeType: 'aiNode', label: 'AI', category: 'AI', desc: 'LLM inference', icon: <AiIcon size={13} />, color: '#ff6b9d' },
+  { type: 'transform', nodeType: 'transformNode',label: 'Transform', category: 'Transform', desc: 'Map & reshape data',      icon: <TransformIcon size={13} />, color: '#b07d1e' },
+  { type: 'code',      nodeType: 'codeNode',     label: 'Code',      category: 'Transform', desc: 'Run JS snippet',          icon: <CodeIcon size={13} />,      color: '#3f7a3a' },
+  { type: 'validator', nodeType: 'validatorNode',label: 'Validator', category: 'Transform', desc: 'Schema check',            icon: <ValidatorIcon size={13} />, color: '#2b7a9c' },
+  { type: 'delay',     nodeType: 'delayNode',    label: 'Delay',     category: 'Transform', desc: 'Wait / throttle',         icon: <ClockIcon size={13} />,     color: '#6b52a3' },
+{ type: 'ai', nodeType: 'aiNode', label: 'AI', category: 'AI', desc: 'LLM inference', icon: <AiIcon size={13} />, color: '#b0316f' },
   // Output
-  { type: 'output',    nodeType: 'outputNode',   label: 'Output',    category: 'Output',    desc: 'Save or POST result',     icon: <SendIcon size={13} />,      color: '#6cc7ba' },
-  { type: 'logger',    nodeType: 'loggerNode',   label: 'Logger',    category: 'Output',    desc: 'Console telemetry',       icon: <LoggerIcon size={13} />,    color: '#d4a574' },
+  { type: 'output',    nodeType: 'outputNode',   label: 'Output',    category: 'Output',    desc: 'Save or POST result',     icon: <SendIcon size={13} />,      color: '#1f7a67' },
+  { type: 'logger',    nodeType: 'loggerNode',   label: 'Logger',    category: 'Output',    desc: 'Console telemetry',       icon: <LoggerIcon size={13} />,    color: '#8a5a2b' },
 ];
 
 const CATEGORIES: Category[] = ['Connect', 'Logic', 'Transform', 'Output', 'AI'];
@@ -249,7 +249,7 @@ export function Sidebar({
       exEdges.map((e) => ({
         ...e,
         animated: false,
-        style: { stroke: '#3a342c', strokeWidth: 1.6 },
+        style: { stroke: 'var(--edge-stroke)', strokeWidth: 1.6 },
       }))
     );
     addToolLog(
@@ -269,7 +269,7 @@ export function Sidebar({
       jdEdges.map((e) => ({
         ...e,
         animated: false,
-        style: { stroke: '#3a342c', strokeWidth: 1.6 },
+        style: { stroke: 'var(--edge-stroke)', strokeWidth: 1.6 },
       }))
     );
     addToolLog(
@@ -486,12 +486,12 @@ export function Sidebar({
               const isSelected = selectedId === n.id;
               const status = liveStatus?.[n.id] as NodeStatus | undefined;
               const dotColor: Record<string, string> = {
-                start: '#9ba657', api_call: '#8f9fdd', transform: '#e0b45c',
-                condition: '#d98aa6', output: '#6cc7ba', delay: '#ab97d4',
-                filter: '#e8a33d', split: '#56cdbd', merge: '#7ec8e3',
-                loop: '#c9a0dc', code: '#a8d8a8', webhook: '#f0a07a',
-                ai: '#ff6b9d', validator: '#7dd3fc', logger: '#d4a574',
-                file: '#93c5fd',
+                start: '#6b7a2e', api_call: '#35618c', transform: '#b07d1e',
+                condition: '#a83f66', output: '#1f7a67', delay: '#6b52a3',
+                filter: '#bd5a30', split: '#2a8c76', merge: '#3f7290',
+                loop: '#7a4fa0', code: '#3f7a3a', webhook: '#b85c2e',
+                ai: '#b0316f', validator: '#2b7a9c', logger: '#8a5a2b',
+                file: '#4a6aa0',
               };
               return (
                 <div
@@ -547,7 +547,7 @@ export function Sidebar({
       {/* Quick actions — judge demo first */}
       <div className="sidebar-section" style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
         <button className="btn-example sb-example-btn sb-judge-btn" onClick={loadJudgeDemo} title="Load the 30s wow demo — HN API → AI → Condition → Split → Download + Log. Press RUN and watch LEDs + ToolLog live.">
-          <span className="sb-example-icon" style={{ background: 'linear-gradient(135deg, rgba(232,163,61,0.22), rgba(86,205,189,0.16))', borderColor: 'rgba(232,163,61,0.32)', color: 'var(--amber)' }}><SparkleIcon size={16} /></span>
+          <span className="sb-example-icon" style={{ background: 'linear-gradient(135deg, var(--amber-soft), var(--cyan-soft))', borderColor: 'color-mix(in srgb, var(--amber) 32%, transparent)', color: 'var(--amber)' }}><SparkleIcon size={16} /></span>
           <span>
             <b>★ Judge Demo — 30s wow</b>
             <i>HN API → AI summarize → condition → split → download + log</i>

@@ -1,43 +1,51 @@
 /* ================================================================
-   AgentFlow — Design Tokens
-   Single source of truth for color, type, spacing, motion
+   AgentFlow — Design Tokens · "ATELIER"
+   An architect's drafting studio: warm bone paper, ruled grid,
+   ink linework, terracotta (human) × viridian (agent).
+   Single source of truth for color, type, spacing, motion.
+   Variable *names* are preserved from the previous system so the
+   entire component layer re-themes from this one file.
    ================================================================ */
 
 :root {
   /* ──────────────────────────────────────────────
-     COLOR — 6 named values, semantic aliases below
+     COLOR — warm paper world, ink hierarchy,
+     two complementary accents + one alarm.
      ────────────────────────────────────────────── */
 
-  /* Ground — the canvas world */
-  --color-ground:        #0d0c0b;
-  --color-ground-raised: #141210;
-  --color-ground-high:   #1c1916;
+  /* Ground — the paper. Mid tone is the app/canvas; raised is lighter. */
+  --color-ground:        #e7dfd0;   /* app + canvas field */
+  --color-ground-raised: #f2ece0;   /* panels, cards */
+  --color-ground-high:   #fbf7ef;   /* highest surfaces, hovers, chips */
 
-  /* Line — structure, not decoration */
-  --color-line:       #2a2622;
-  --color-line-soft:  #36312c;
+  /* Line — ruled structure, drawn not decorative */
+  --color-line:       #d6ccb8;   /* subtle rule */
+  --color-line-soft:  #c4b8a0;   /* stronger rule / hover */
 
-  /* Ink — reading hierarchy */
-  --color-ink:        #f2ede6;
-  --color-ink-muted:  #b8b0a3;
-  --color-ink-faint:  #7a7368;
+  /* Ink — reading hierarchy, warm near-black */
+  --color-ink:        #24201a;
+  --color-ink-muted:  #5d5445;
+  --color-ink-faint:  #948a76;
 
-  /* Human (amber) — warm, authoring, intent */
-  --color-human:        #e8a33d;
-  --color-human-dim:    #c4882e;
-  --color-human-soft:   rgba(232, 163, 61, 0.12);
-  --color-human-glow:   rgba(232, 163, 61, 0.25);
+  /* On-accent — cream that sits on filled terracotta/viridian */
+  --color-on-accent:  #fbf6ec;
 
-  /* Agent (cyan) — cool, executing, live */
-  --color-agent:        #4fd1c5;
-  --color-agent-dim:    #38b2ac;
-  --color-agent-soft:   rgba(79, 209, 197, 0.10);
-  --color-agent-glow:   rgba(79, 209, 197, 0.30);
+  /* Human (terracotta) — warm, authoring, intent */
+  --color-human:        #bd5a30;
+  --color-human-dim:    #9f4823;
+  --color-human-soft:   rgba(189, 90, 48, 0.13);
+  --color-human-glow:   rgba(189, 90, 48, 0.30);
 
-  /* Fault — single use, high contrast */
-  --color-fault:        #e53e3e;
-  --color-fault-soft:   rgba(229, 62, 62, 0.10);
-  --color-fault-glow:   rgba(229, 62, 62, 0.30);
+  /* Agent (viridian) — cool, executing, live */
+  --color-agent:        #1f7a67;
+  --color-agent-dim:    #166152;
+  --color-agent-soft:   rgba(31, 122, 103, 0.13);
+  --color-agent-glow:   rgba(31, 122, 103, 0.26);
+
+  /* Fault (madder) — single use, high contrast alarm */
+  --color-fault:        #b12a1d;
+  --color-fault-soft:   rgba(177, 42, 29, 0.12);
+  --color-fault-glow:   rgba(177, 42, 29, 0.28);
 
   /* ──────────────────────────────────────────────
      SEMANTIC ALIASES — use these in components
@@ -62,6 +70,7 @@
   --ink-2:        var(--color-ink-muted);
   --dim:          var(--color-ink-muted);
   --faint:        var(--color-ink-faint);
+  --on-accent:    var(--color-on-accent);
 
   /* Accent — Human (authoring) */
   --amber:        var(--color-human);
@@ -75,25 +84,34 @@
   --cyan-soft:    var(--color-agent-soft);
   --cyan-glow:    var(--color-agent-glow);
 
-  /* Fault */
+  /* Fault — both alias families defined */
   --red:          var(--color-fault);
   --red-soft:     var(--color-fault-soft);
   --red-glow:     var(--color-fault-glow);
+  --fault:        var(--color-fault);
+  --fault-soft:   var(--color-fault-soft);
+  --fault-glow:   var(--color-fault-glow);
+
+  /* Drafting extras */
+  --grid-line:      #d3c8b3;   /* fine canvas rule */
+  --grid-line-bold: #c7bba3;   /* coarse canvas rule */
+  --edge-stroke:    #a99e88;   /* wire ink on paper */
+  --paper-shadow:   rgba(58, 46, 28, 0.16);  /* warm cast shadow */
 
   /* ──────────────────────────────────────────────
-     TYPOGRAPHY
+     TYPOGRAPHY — editorial serif + warm grotesque + technical mono
      ────────────────────────────────────────────── */
-  --font-display: 'Chakra Petch', sans-serif;
-  --font-body:    'Archivo', sans-serif;
-  --font-mono:    'IBM Plex Mono', monospace;
+  --font-display: 'Fraunces', 'Times New Roman', serif;
+  --font-body:    'Hanken Grotesk', system-ui, sans-serif;
+  --font-mono:    'Spline Sans Mono', ui-monospace, monospace;
 
-  /* Type scale — 1.25 ratio, 3 weights only */
-  --text-xs:  11px;  /* captions, labels */
-  --text-sm:  12px;  /* body small, button text */
-  --text-base: 14px; /* body default */
-  --text-lg:  16px;  /* emphasis */
-  --text-xl:  20px;  /* section titles */
-  --text-2xl: 28px;  /* canvas thesis */
+  /* Type scale — 1.25 ratio */
+  --text-xs:  11px;
+  --text-sm:  12px;
+  --text-base: 14px;
+  --text-lg:  16px;
+  --text-xl:  20px;
+  --text-2xl: 28px;
 
   --weight-regular: 400;
   --weight-medium:  500;
@@ -118,12 +136,12 @@
   --space-12: 48px;
 
   /* ──────────────────────────────────────────────
-     RADIUS
+     RADIUS — crisp, drafting-square with soft corners
      ────────────────────────────────────────────── */
-  --radius-sm:  4px;
-  --radius-md:  6px;
-  --radius-lg:  10px;
-  --radius-xl:  14px;
+  --radius-sm:  3px;
+  --radius-md:  5px;
+  --radius-lg:  8px;
+  --radius-xl:  12px;
   --radius-pill: 999px;
 
   /* ──────────────────────────────────────────────
@@ -148,6 +166,6 @@
   --z-popover:     100;
   --z-modal:       200;
   --z-toast:       300;
-  --z-collab-bar:  50;  /* signature element */
+  --z-collab-bar:  50;
   --z-tooltip:     400;
 }

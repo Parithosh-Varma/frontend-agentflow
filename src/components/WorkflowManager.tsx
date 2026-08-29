@@ -75,7 +75,7 @@ export function WorkflowManager({
 
   const handleLoad = async (wf: api.Workflow) => {
     setNodes(() => wf.nodes as Node[]);
-    setEdges(() => wf.edges.map((e: any) => ({ ...e, animated: false, style: { stroke: '#3a342c', strokeWidth: 1.6 } })) as Edge[]);
+    setEdges(() => wf.edges.map((e: any) => ({ ...e, animated: false, style: { stroke: 'var(--edge-stroke)', strokeWidth: 1.6 } })) as Edge[]);
     setCurrentWorkflowId(wf.id);
     setCurrentWorkflowName(wf.name);
     addToolLog('load_workflow', { name: wf.name }, { success: true, nodeCount: wf.nodes.length }, 'you');

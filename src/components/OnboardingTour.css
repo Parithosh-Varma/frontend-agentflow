@@ -27,15 +27,15 @@
   outline-offset: 2px !important;
   border-radius: 8px !important;
   box-shadow:
-    0 0 0 6px rgba(232,163,61,0.14),
+    0 0 0 6px rgba(189,90,48,0.14),
     0 12px 40px rgba(0,0,0,0.45) !important;
   transition: outline 0.2s, box-shadow 0.2s !important;
   animation: tour-pulse 1.8s ease-in-out infinite;
 }
 
 @keyframes tour-pulse {
-  0%, 100% { box-shadow: 0 0 0 6px rgba(232,163,61,0.14), 0 12px 40px rgba(0,0,0,0.45); }
-  50% { box-shadow: 0 0 0 10px rgba(232,163,61,0.08), 0 12px 40px rgba(0,0,0,0.45); }
+  0%, 100% { box-shadow: 0 0 0 6px rgba(189,90,48,0.14), 0 12px 40px rgba(0,0,0,0.45); }
+  50% { box-shadow: 0 0 0 10px rgba(189,90,48,0.08), 0 12px 40px rgba(0,0,0,0.45); }
 }
 
 /* Tooltip card */
@@ -48,7 +48,7 @@
   border: 1px solid var(--border);
   border-radius: 18px;
   padding: 28px 26px 20px;
-  box-shadow: 0 24px 80px rgba(0,0,0,0.60), 0 0 0 1px rgba(232,163,61,0.07);
+  box-shadow: 0 24px 80px rgba(0,0,0,0.60), 0 0 0 1px rgba(189,90,48,0.07);
   animation: tour-card-in 0.25s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -108,7 +108,7 @@
 .tour-dot.active {
   width: 20px;
   background: var(--amber);
-  box-shadow: 0 0 8px rgba(232,163,61,0.35);
+  box-shadow: 0 0 8px rgba(189,90,48,0.35);
 }
 .tour-dot.done { background: var(--amber-dim); opacity: 0.55; }
 
@@ -157,7 +157,7 @@
   border: none;
   border-radius: 8px;
   background: linear-gradient(180deg, var(--amber) 0%, var(--amber-dim) 100%);
-  color: #1a1408;
+  color: var(--on-accent);
   font-family: var(--font-display);
   font-size: 10px;
   font-weight: 600;
@@ -166,4 +166,4 @@
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.2);
 }
-.tour-btn-primary:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(232,163,61,0.3); }
+.tour-btn-primary:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(189,90,48,0.3); }

@@ -111,7 +111,7 @@ export function ExecutionPanel({
         banner.className = 'run-complete-banner';
         banner.style.cssText = `
           position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
-          background: var(--amber); color: #1a1408; padding: 10px 20px;
+          background: var(--amber); color: var(--on-accent); padding: 10px 20px;
           border-radius: var(--r-md); font-family: var(--font-mono);
           font-size: 12px; letter-spacing: 0.1em; z-index: 1000;
           box-shadow: 0 4px 12px rgba(0,0,0,0.3);

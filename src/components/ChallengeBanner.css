@@ -31,8 +31,8 @@
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--amber);
-  background: rgba(232,163,61,0.1);
-  border: 1px solid rgba(232,163,61,0.18);
+  background: rgba(189,90,48,0.1);
+  border: 1px solid rgba(189,90,48,0.18);
   padding: 3px 7px;
   border-radius: 99px;
 }
@@ -47,24 +47,38 @@
 
 .challenge-hero-img-link {
   display: block;
-  border-radius: 0;
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  border: none;
-  background: transparent;
-  box-shadow: none;
-  transition: opacity 0.15s;
+  border: 1px solid var(--border-soft);
+  background: linear-gradient(158deg, #2a251d 0%, #1b1813 100%);
+  padding: 20px 28px;
+  box-shadow: 0 12px 34px var(--paper-shadow), inset 0 1px 0 rgba(255,255,255,0.04);
+  transition: transform 0.18s var(--ease-standard), box-shadow 0.18s var(--ease-standard);
+  position: relative;
+}
+.challenge-hero-img-link::before {
+  /* pinned registration tick, top-left of the title plate */
+  content: '';
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--amber);
+  box-shadow: 0 0 0 3px rgba(189,90,48,0.18);
 }
 .challenge-hero-img-link:hover {
-  transform: none;
-  border-color: transparent;
-  box-shadow: none;
-  opacity: 0.92;
+  transform: translateY(-1px);
+  border-color: var(--border);
+  box-shadow: 0 16px 40px var(--paper-shadow), inset 0 1px 0 rgba(255,255,255,0.05);
+  opacity: 1;
 }
 
 .challenge-hero-img {
   width: 100%;
   height: auto;
-  max-height: 260px;
+  max-height: 150px;
   object-fit: contain;
   object-position: center;
   display: block;

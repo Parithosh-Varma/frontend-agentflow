@@ -161,17 +161,17 @@
   box-shadow: 0 4px 16px rgba(0,0,0,0.15);
 }
 .dash-feature-card.highlight {
-  border-color: rgba(232,163,61,0.35);
-  background: linear-gradient(180deg, var(--panel) 0%, rgba(232,163,61,0.06) 100%);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.2), 0 0 0 1px rgba(232,163,61,0.08);
+  border-color: rgba(189,90,48,0.35);
+  background: linear-gradient(180deg, var(--panel) 0%, rgba(189,90,48,0.06) 100%);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2), 0 0 0 1px rgba(189,90,48,0.08);
 }
 
 .dash-feature-icon {
   width: 30px;
   height: 30px;
   border-radius: 8px;
-  background: linear-gradient(135deg, rgba(232,163,61,0.14), rgba(86,205,189,0.1));
-  border: 1px solid rgba(232,163,61,0.16);
+  background: linear-gradient(135deg, rgba(189,90,48,0.14), rgba(31,122,103,0.1));
+  border: 1px solid rgba(189,90,48,0.16);
   color: var(--amber);
   display: flex;
   align-items: center;
@@ -214,8 +214,8 @@
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--amber);
-  background: rgba(232,163,61,0.1);
-  border: 1px solid rgba(232,163,61,0.16);
+  background: rgba(189,90,48,0.1);
+  border: 1px solid rgba(189,90,48,0.16);
   padding: 3px 7px;
   border-radius: 99px;
 }
