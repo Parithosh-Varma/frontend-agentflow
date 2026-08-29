@@ -14,7 +14,9 @@ export function ChallengeBanner({ variant = 'banner' }: Props) {
   const [expanded, setExpanded] = useState(false);
 
   useEffect(() => {
-    if (localStorage.getItem(DISMISS_KEY) === 'true') setDismissed(true);
+    if (localStorage.getItem(DISMISS_KEY) === 'true') { setDismissed(true); return; }
+    const t = setTimeout(() => handleDismiss(), 10000);
+    return () => clearTimeout(t);
   }, []);
 
   const handleDismiss = () => {

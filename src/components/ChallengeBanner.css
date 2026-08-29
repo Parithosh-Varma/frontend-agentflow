@@ -2,8 +2,8 @@
    Challenge Banner — full-width hero (not small thumbnail)
    ================================================================ */
 .challenge-hero {
-  background: transparent;
-  border-bottom: none;
+  background: #0d0c0b;
+  border-bottom: 1px solid #1c1916;
   position: relative;
   z-index: 5;
   padding: 0;
