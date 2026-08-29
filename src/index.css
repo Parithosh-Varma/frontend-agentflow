@@ -1,6 +1,7 @@
-/* Global resets + design tokens */
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+/* Global resets + design tokens · ATELIER */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500;600&display=swap');
 @import './styles/tokens.css';
+@import './styles/atelier.css';
 
 * {
   margin: 0;
@@ -23,9 +24,21 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Paper grain — fixed, non-interactive atmosphere overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.045;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
 ::selection {
-  background: var(--amber-soft);
-  color: var(--ink);
+  background: var(--amber);
+  color: var(--on-accent);
 }
 
 /* Focus visible — consistent, accessible */
@@ -34,11 +47,16 @@ body {
   outline-offset: 2px;
 }
 
-/* Scrollbar — subtle */
-::-webkit-scrollbar { width: 6px; height: 6px; }
+/* Scrollbar — subtle, ink-on-paper */
+::-webkit-scrollbar { width: 8px; height: 8px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: var(--border); border-radius: 99px; }
-::-webkit-scrollbar-thumb:hover { background: var(--border-soft); }
+::-webkit-scrollbar-thumb {
+  background: var(--border-soft);
+  border-radius: 99px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--faint); background-clip: padding-box; }
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {

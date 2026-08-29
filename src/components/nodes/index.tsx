@@ -25,23 +25,25 @@ export const NODE_DISPLAY_NAMES: Record<string, string> = {
   file:      'File',
 };
 
+// Atelier ink palette — mid-dark, saturated-yet-earthy hues that read
+// cleanly on warm paper and harmonize with terracotta × viridian.
 const TYPE_META: Record<string, { tint: string; icon: ReactNode }> = {
-  start:     { tint: '#9ba657', icon: <PlayIcon size={11} /> },
-  api_call:  { tint: '#8f9fdd', icon: <GlobeIcon size={12} /> },
-  transform: { tint: '#e0b45c', icon: <TransformIcon size={12} /> },
-  condition: { tint: '#d98aa6', icon: <BranchIcon size={12} /> },
-  output:    { tint: '#6cc7ba', icon: <SendIcon size={12} /> },
-  delay:     { tint: '#ab97d4', icon: <ClockIcon size={12} /> },
-  filter:    { tint: '#e8a33d', icon: <FilterIcon size={12} /> },
-  split:     { tint: '#56cdbd', icon: <SplitIcon size={12} /> },
-  merge:     { tint: '#7ec8e3', icon: <MergeIcon size={12} /> },
-  loop:      { tint: '#c9a0dc', icon: <LoopIcon size={12} /> },
-  code:      { tint: '#a8d8a8', icon: <CodeIcon size={12} /> },
-  webhook:   { tint: '#f0a07a', icon: <WebhookIcon size={12} /> },
-  ai:        { tint: '#ff6b9d', icon: <AiIcon size={12} /> },
-  validator: { tint: '#7dd3fc', icon: <ValidatorIcon size={12} /> },
-  logger:    { tint: '#d4a574', icon: <LoggerIcon size={12} /> },
-  file:      { tint: '#93c5fd', icon: <FileIcon size={12} /> },
+  start:     { tint: '#6b7a2e', icon: <PlayIcon size={11} /> },
+  api_call:  { tint: '#35618c', icon: <GlobeIcon size={12} /> },
+  transform: { tint: '#b07d1e', icon: <TransformIcon size={12} /> },
+  condition: { tint: '#a83f66', icon: <BranchIcon size={12} /> },
+  output:    { tint: '#1f7a67', icon: <SendIcon size={12} /> },
+  delay:     { tint: '#6b52a3', icon: <ClockIcon size={12} /> },
+  filter:    { tint: '#bd5a30', icon: <FilterIcon size={12} /> },
+  split:     { tint: '#2a8c76', icon: <SplitIcon size={12} /> },
+  merge:     { tint: '#3f7290', icon: <MergeIcon size={12} /> },
+  loop:      { tint: '#7a4fa0', icon: <LoopIcon size={12} /> },
+  code:      { tint: '#3f7a3a', icon: <CodeIcon size={12} /> },
+  webhook:   { tint: '#b85c2e', icon: <WebhookIcon size={12} /> },
+  ai:        { tint: '#b0316f', icon: <AiIcon size={12} /> },
+  validator: { tint: '#2b7a9c', icon: <ValidatorIcon size={12} /> },
+  logger:    { tint: '#8a5a2b', icon: <LoggerIcon size={12} /> },
+  file:      { tint: '#4a6aa0', icon: <FileIcon size={12} /> },
 };
 
 function Module(props: NodeProps) {

@@ -212,7 +212,7 @@ function CanvasDemo({ onStartFlow, isPlaying }: CanvasDemoProps) {
           label: e.label || '',
           type: 'labeled',
           animated: false,
-          style: { stroke: '#3a342c', strokeWidth: 1.6 },
+          style: { stroke: 'var(--edge-stroke)', strokeWidth: 1.6 },
         }));
         setDemoNodes(nodesToShow);
         setDemoEdges(edgesToShow);
@@ -240,12 +240,12 @@ function CanvasDemo({ onStartFlow, isPlaying }: CanvasDemoProps) {
         edges={demoEdges}
         nodeTypes={nodeTypes}
         edgeTypes={edgeTypes}
-        defaultEdgeOptions={{ type: 'labeled', style: { stroke: '#3a342c', strokeWidth: 1.6 } }}
+        defaultEdgeOptions={{ type: 'labeled', style: { stroke: 'var(--edge-stroke)', strokeWidth: 1.6 } }}
         fitView
         proOptions={{ hideAttribution: true }}
         style={{ background: 'var(--bg)', width: '100%', height: '100%' }}
       >
-        <Background variant={BackgroundVariant.Lines} gap={26} color="#262119" />
+        <Background variant={BackgroundVariant.Lines} gap={26} color="#d3c8b3" />
       </ReactFlow>
       {showCTA && (
         <div className="canvas-demo-cta" style={{
@@ -473,7 +473,7 @@ function CanvasPage() {
       if (!params.source || !params.target) return;
       setNodes((nds: Node[]) => localWireAdjust(nds, [...edgesRef.current, params as any], params.source!, params.target!));
       setEdges((eds: any[]) =>
-        addEdge({ ...params, type: 'labeled', animated: false, style: { stroke: '#3a342c' } }, eds)
+        addEdge({ ...params, type: 'labeled', animated: false, style: { stroke: 'var(--edge-stroke)' } }, eds)
       );
       setTimeout(() => {
         const tgt = nodesRef.current.find((n) => n.id === params.target);
@@ -677,7 +677,7 @@ function CanvasPage() {
       if (w === 'judge-demo') {
         const { nodes: jdNodes, edges: jdEdges } = buildJudgeDemoFlow();
         setNodes(jdNodes);
-        setEdges(jdEdges.map((e: any) => ({ ...e, animated: false, style: { stroke: '#3a342c', strokeWidth: 1.6 } })));
+        setEdges(jdEdges.map((e: any) => ({ ...e, animated: false, style: { stroke: 'var(--edge-stroke)', strokeWidth: 1.6 } })));
         addToolLog('load_judge_demo', { via: 'url' }, { success: true, message: 'Loaded Judge Demo from URL — press RUN' }, 'you');
         setTimeout(() => fitAllNodes(), 220);
         return;
@@ -822,7 +822,7 @@ function CanvasPage() {
           </button>
           <div className="wordmark">
             <img src={logo} alt="AgentFlow" className="wordmark-logo" />
-            <h1>AGENTFLOW</h1>
+            <h1>AgentFlow</h1>
           </div>
           <span className="rail-tag">HUMAN × AGENT CANVAS</span>
           <div className={`webmcp-pill ${hasWebMCP ? 'ready' : 'needs'}`} title={hasWebMCP ? 'WebMCP: 27 tools ready — 8 new (find_nodes, get_execution_details, probe_api, undo) fix 10 limitations' : 'Enable one setting: chrome://flags/#enable-webmcp-testing → Enabled → Relaunch'}>
@@ -948,19 +948,19 @@ function CanvasPage() {
             }}
             nodeTypes={nodeTypes}
             edgeTypes={edgeTypes}
-            defaultEdgeOptions={{ type: 'labeled', style: { stroke: '#3a342c', strokeWidth: 1.6 } }}
+            defaultEdgeOptions={{ type: 'labeled', style: { stroke: 'var(--edge-stroke)', strokeWidth: 1.6 } }}
             fitView
             proOptions={{ hideAttribution: true }}
             style={{ background: 'var(--bg)' }}
           >
             <Controls showInteractive={false} position="bottom-right" />
             <MiniMap
-              nodeColor="#3a342c"
-              maskColor="rgba(21,19,16,0.8)"
+              nodeColor="#b3a891"
+              maskColor="rgba(231,223,208,0.72)"
               style={{ background: 'var(--panel)', width: 130, height: 90 }}
               position="top-right"
             />
-            <Background variant={BackgroundVariant.Lines} gap={26} color="#262119" />
+            <Background variant={BackgroundVariant.Lines} gap={26} color="#d3c8b3" />
           </ReactFlow>
 
           {/* Replay Overlay - animated data packets */}
